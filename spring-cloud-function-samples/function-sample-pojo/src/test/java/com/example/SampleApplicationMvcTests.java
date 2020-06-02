@@ -54,7 +54,7 @@ public class SampleApplicationMvcTests {
 	@Test
 	public void wordsUpperCase() throws Exception {
 		ResponseEntity<String> result = this.rest
-			.exchange(RequestEntity.get(new URI("/words/upperCase"))
+			.exchange(RequestEntity.get(new URI("/words|upperCase"))
 				.accept(MediaType.APPLICATION_JSON).build(), String.class);
 		assertThat(result.getBody())
 			.isEqualTo("[{\"value\":\"FOO\"},{\"value\":\"BAR\"}]");
