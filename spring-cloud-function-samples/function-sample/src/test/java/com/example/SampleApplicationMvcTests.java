@@ -44,7 +44,7 @@ public class SampleApplicationMvcTests {
 
 	@Test
 	public void words() throws Exception {
-		MvcResult result = this.mockMvc.perform(get("/words")).andReturn();
+		MvcResult result = this.mockMvc.perform(get("/words|uppercase")).andReturn();
 		mockMvc.perform(asyncDispatch(result)).andExpect(content().string("[\"foo\",\"bar\"]"));
 	}
 
