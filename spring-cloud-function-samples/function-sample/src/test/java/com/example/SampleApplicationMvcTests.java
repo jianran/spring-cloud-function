@@ -49,6 +49,12 @@ public class SampleApplicationMvcTests {
 	}
 
 	@Test
+	public void wordsUppercase() throws Exception {
+		MvcResult result = this.mockMvc.perform(get("/words|uppercase")).andReturn();
+		mockMvc.perform(asyncDispatch(result)).andExpect(content().string("[\"FOO\",\"BAR\"]"));
+	}
+
+	@Test
 	public void uppercase() throws Exception {
 		MvcResult result = this.mockMvc.perform(post("/uppercase").contentType(MediaType.TEXT_PLAIN).content("foo")).andReturn();
 		mockMvc.perform(asyncDispatch(result)).andExpect(content().string("FOO"));
