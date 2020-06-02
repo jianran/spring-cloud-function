@@ -51,5 +51,4 @@ public class SampleApplicationMvcTests {
 			.isEqualTo("[{\"value\":\"foo\"},{\"value\":\"bar\"}]");
 	}
 
-
 }
