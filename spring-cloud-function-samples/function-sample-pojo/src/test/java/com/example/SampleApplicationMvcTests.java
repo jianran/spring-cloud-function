@@ -51,4 +51,9 @@ public class SampleApplicationMvcTests {
 			.isEqualTo("[{\"value\":\"foo\"},{\"value\":\"bar\"}]");
 	}
 
+
+	public void wordsTest(){
+		System.out.println("hello world");
+	}
+
 }
