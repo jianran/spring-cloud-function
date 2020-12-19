@@ -46,6 +46,14 @@ public class SampleApplicationMvcTests {
 	public void words() throws Exception {
 		MvcResult result = this.mockMvc.perform(get("/words")).andReturn();
 		mockMvc.perform(asyncDispatch(result)).andExpect(content().string("[\"foo\",\"bar\"]"));
+		System.out.println("git reset...");
+	}
+
+	@Test
+	public void words() throws Exception {
+		MvcResult result = this.mockMvc.perform(get("/words")).andReturn();
+		mockMvc.perform(asyncDispatch(result)).andExpect(content().string("[\"foo\",\"bar\"]"));
+		mockMvc.perform(asyncDispatch(result)).andExpect(content().string("[\"foo\",\"bar\"]"));
 	}
 
 	@Test
